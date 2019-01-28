@@ -1,0 +1,52 @@
+﻿@model ProductSearchModel
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<div class="container clearfix">
+    <div class="pull-right">
+        <a asp-action="Create" class="btn"><i class="fa fa-plus-square"></i>AddNew</a>
+    </div>
+</div>
+
+<div id="grid"></div>
+
+<script>
+    $(document).ready(function () {
+        $("#grid").kendoGrid({
+            dataSource: {
+                type: "json",
+                transport: {
+                    read: {
+                        url: "@Html.Raw(Url.Action("List", "Product"))",
+                        type: "POST",
+                        dataType: "json",
+                    }
+                },
+                schema: {
+                    data: "Data",
+                    total: "Total",
+                    errors: "Errors"
+                },
+                pageSize: @(Model.PageSize),
+                serverPaging: true,
+            },
+            pageable: {
+                refresh: true,
+                pageSizes: [@(Model.AvailablePageSizes)],
+                @await Html.PartialAsync("_GridPagerMessages")
+            },
+            scrollable: false,
+            columns: [
+                {
+                    field: "ProductName",
+                    title: "Product Name",
+                    headerAttributes: { style: "text-align:right" },
+                    attributes: { style: "text-align:right" },
+                }
+            ]
+        });
+    });
+</script>
+

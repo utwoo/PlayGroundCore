@@ -1,0 +1,27 @@
+﻿@model ProductModel
+
+@{
+    ViewData["Title"] = "Class Create";
+}
+
+<form asp-controller="Product" asp-action="Create" method="post">
+    <div class="container">
+        <div class="row justify-content-between">
+            <h5>
+                AddNew
+                <small>
+                    <i class="fa fa-arrow-circle-left"></i>
+                    <a asp-action="List">Back To List</a>
+                </small>
+            </h5>
+            <div>
+                <button type="submit" name="save" class="btn bg-blue">
+                    <i class="fa fa-floppy-o"></i>
+                    Save
+                </button>
+            </div>
+        </div>
+        @await Html.PartialAsync("_CreateOrUpdate", Model)
+    </div>
+</form>
+

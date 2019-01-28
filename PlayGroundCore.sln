@@ -1,0 +1,80 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RabbitMQ", "RabbitMQ", "{397131F4-304E-484A-B048-FE8602160029}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ.Alpha", "RabbitMQ\RabbitMQ.Alpha\RabbitMQ.Alpha.csproj", "{0ABFDE49-6E67-45F4-ACA8-1084CB935963}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ.Beta", "RabbitMQ\RabbitMQ.Beta\RabbitMQ.Beta.csproj", "{7C94671A-3D82-4BDA-BF3B-C881B18984B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Redis", "Redis", "{C9630BB6-99DA-4A31-BCF5-2FDDCD39C824}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Redis.Alpha", "Redis\Redis.Alpha\Redis.Alpha.csproj", "{D9329074-D6A5-47B6-85BE-397E6D31E12F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KendoUI", "KendoUI", "{29D1BF0F-BF57-43AD-8499-B54E91B53C7A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASPNetCoreWithKendoUI", "KendoUI\ASPNetCoreWithKendoUI\ASPNetCoreWithKendoUI.csproj", "{8D9DA171-DC62-4E5B-AE0F-261A956E82D6}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "RabbitMQ.HTML", "RabbitMQ\RabbitMQ.HTML\", "{AA4D5C16-4F03-43B6-BD8B-492B8EC219EF}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_8437"
+		Debug.AspNetCompiler.PhysicalPath = "RabbitMQ\RabbitMQ.HTML\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_8437\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_8437"
+		Release.AspNetCompiler.PhysicalPath = "RabbitMQ\RabbitMQ.HTML\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_8437\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "8437"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0ABFDE49-6E67-45F4-ACA8-1084CB935963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ABFDE49-6E67-45F4-ACA8-1084CB935963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ABFDE49-6E67-45F4-ACA8-1084CB935963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ABFDE49-6E67-45F4-ACA8-1084CB935963}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C94671A-3D82-4BDA-BF3B-C881B18984B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C94671A-3D82-4BDA-BF3B-C881B18984B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C94671A-3D82-4BDA-BF3B-C881B18984B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C94671A-3D82-4BDA-BF3B-C881B18984B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9329074-D6A5-47B6-85BE-397E6D31E12F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9329074-D6A5-47B6-85BE-397E6D31E12F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9329074-D6A5-47B6-85BE-397E6D31E12F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9329074-D6A5-47B6-85BE-397E6D31E12F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D9DA171-DC62-4E5B-AE0F-261A956E82D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D9DA171-DC62-4E5B-AE0F-261A956E82D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D9DA171-DC62-4E5B-AE0F-261A956E82D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D9DA171-DC62-4E5B-AE0F-261A956E82D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA4D5C16-4F03-43B6-BD8B-492B8EC219EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA4D5C16-4F03-43B6-BD8B-492B8EC219EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA4D5C16-4F03-43B6-BD8B-492B8EC219EF}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA4D5C16-4F03-43B6-BD8B-492B8EC219EF}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0ABFDE49-6E67-45F4-ACA8-1084CB935963} = {397131F4-304E-484A-B048-FE8602160029}
+		{7C94671A-3D82-4BDA-BF3B-C881B18984B1} = {397131F4-304E-484A-B048-FE8602160029}
+		{D9329074-D6A5-47B6-85BE-397E6D31E12F} = {C9630BB6-99DA-4A31-BCF5-2FDDCD39C824}
+		{8D9DA171-DC62-4E5B-AE0F-261A956E82D6} = {29D1BF0F-BF57-43AD-8499-B54E91B53C7A}
+		{AA4D5C16-4F03-43B6-BD8B-492B8EC219EF} = {397131F4-304E-484A-B048-FE8602160029}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A293C881-2D60-49DE-B796-827CC715D9D2}
+	EndGlobalSection
+EndGlobal
