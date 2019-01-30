@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "MassTransit.Gamma": {
+      "commandName": "Project"
+    }
+  }
+}
