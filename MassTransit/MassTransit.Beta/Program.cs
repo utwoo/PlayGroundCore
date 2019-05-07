@@ -8,8 +8,8 @@ namespace MassTransit.Beta
     {
         static void Main(string[] args)
         {
-            Receive();
-            //Subscribe();
+            //Receive();
+            Subscribe();
             //Response();
         }
 
@@ -22,7 +22,7 @@ namespace MassTransit.Beta
                 var host = cfg.Host(new Uri("rabbitmq://192.168.227.131/host"), h =>
                 {
                     h.Username("admin");
-                    h.Password("Lunasea2019");
+                    h.Password("yy123");
                 });
 
                 // it will create queue [MassTransit.Send] and bind it to exchange [MassTransit.Send] 
@@ -53,7 +53,7 @@ namespace MassTransit.Beta
                 var host = cfg.Host(new Uri("rabbitmq://192.168.227.131/host"), h =>
                 {
                     h.Username("admin");
-                    h.Password("Lunasea2019");
+                    h.Password("yy123");
                 });
 
                 // It will create queue "MessageInfo.Subscribe" and bind it to exchange "MessageInfo.Subscribe" 
@@ -82,7 +82,7 @@ namespace MassTransit.Beta
                 var host = cfg.Host(new Uri("rabbitmq://192.168.227.131/host"), h =>
                 {
                     h.Username("admin");
-                    h.Password("Lunasea2019");
+                    h.Password("yy123");
                 });
 
                 // it will create queue [MassTransit.Request] and bind it to exchange [MassTransit.Request] 

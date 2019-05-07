@@ -33,6 +33,7 @@ namespace ASPNetCoreWithKendoUI.TagHelpers
             {
                 throw new ArgumentNullException(nameof(output));
             }
+
             output.SuppressOutput();
 
             var tagBuilder = Generator.GenerateLabel(ViewContext, For.ModelExplorer, For.Name, null, new { @class = "col-sm-2 col-form-label" });

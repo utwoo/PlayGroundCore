@@ -25,11 +25,11 @@ namespace RabbitMQ.Alpha
             var connectionFactory = new ConnectionFactory
             {
                 //HostName = "47.96.126.127", // Aliyun
-                HostName = "192.168.227.131", // CentOS Beta
+                HostName = "192.168.227.134", // CentOS Beta
                 Port = 5672,
-                VirtualHost = "host",
-                UserName = "admin",
-                Password = "Lunasea2019"
+                //VirtualHost = "host",
+                UserName = "guest",
+                Password = "guest"
             };
 
             // create RabbitMQ connection

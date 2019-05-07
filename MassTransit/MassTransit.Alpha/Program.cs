@@ -8,8 +8,8 @@ namespace MassTransit.Alpha
     {
         static void Main(string[] args)
         {
-            Send().Wait();
-            //Publish();
+            //Send().Wait();
+            Publish();
             //Request().Wait();
         }
 
@@ -20,7 +20,7 @@ namespace MassTransit.Alpha
                 cfg.Host(new Uri("rabbitmq://192.168.227.131/host"), host =>
                 {
                     host.Username("admin");
-                    host.Password("Lunasea2019");
+                    host.Password("yy123");
                 });
             });
         }

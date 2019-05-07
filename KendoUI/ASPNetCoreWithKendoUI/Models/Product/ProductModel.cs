@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ASPNetCoreWithKendoUI.Models.Product
 {
-    [ModelBinder(BinderType = typeof(ProductModelBinder))]
+    //[ModelBinder(BinderType = typeof(ProductModelBinder))]
     public class ProductModel : BaseModel
     {
         [Required]

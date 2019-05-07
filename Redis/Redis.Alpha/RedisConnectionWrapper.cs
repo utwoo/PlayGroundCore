@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using RedLockNet.SERedis;
@@ -25,7 +26,7 @@ namespace Redis.Alpha
 
         public RedisConnectionWrapper()
         {
-            this._connectionString = new Lazy<string>(() => "192.168.227.131:6379, password=Lunasea2019, ssl=False");
+            this._connectionString = new Lazy<string>(() => "192.168.227.131:6379,password=Lunasea2019,ssl=False");
             this._redisLockFactory = CreateRedisLockFactory();
         }
 
@@ -61,17 +62,22 @@ namespace Redis.Alpha
         /// <returns>RedLock factory</returns>
         protected RedLockFactory CreateRedisLockFactory()
         {
-            var configurationOptions = ConfigurationOptions.Parse(_connectionString.Value);
-            var redlockEndPoints = GetEndPoints().Select(endpoint => new RedLockEndPoint
+            //var configurationOptions = ConfigurationOptions.Parse(_connectionString.Value);
+            //var redlockEndPoints = GetEndPoints().Select(endpoint => new RedLockEndPoint
+            //{
+            //    EndPoint = endpoint,
+            //    Password = configurationOptions.Password,
+            //    Ssl = configurationOptions.Ssl,
+            //    RedisDatabase = configurationOptions.DefaultDatabase,
+            //    ConfigCheckSeconds = configurationOptions.ConfigCheckSeconds,
+            //    ConnectionTimeout = configurationOptions.ConnectTimeout,
+            //    SyncTimeout = configurationOptions.SyncTimeout
+            //}).ToList();
+            var redlockEndPoints = new List<RedLockEndPoint>
             {
-                EndPoint = endpoint,
-                Password = configurationOptions.Password,
-                Ssl = configurationOptions.Ssl,
-                RedisDatabase = configurationOptions.DefaultDatabase,
-                ConfigCheckSeconds = configurationOptions.ConfigCheckSeconds,
-                ConnectionTimeout = configurationOptions.ConnectTimeout,
-                SyncTimeout = configurationOptions.SyncTimeout
-            }).ToList();
+                new RedLockEndPoint{ EndPoint = new IPEndPoint(IPAddress.Parse("192.168.227.130"), 6379), Password = "Lunasea2019" },
+                new RedLockEndPoint{ EndPoint = new IPEndPoint(IPAddress.Parse("192.168.227.131"), 6379), Password = "Lunasea2019" },
+            };
 
             return RedLockFactory.Create(redlockEndPoints);
         }

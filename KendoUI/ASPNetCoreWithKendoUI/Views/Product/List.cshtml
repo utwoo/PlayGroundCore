@@ -11,12 +11,24 @@
 </div>
 
 <div id="grid"></div>
+<div id="detail"></div>
 
 <script>
+    function onChange(arg) {
+        var cell = this.select(),
+            cellIndex = cell.index(),
+            dataSource = this.dataSource,
+            dataItem = dataSource.view()[cell.closest("tr").index()];
+
+        $.get("@Url.Action("DetailContent")", { id: dataItem.Id }, function (data) {
+            $("#detail").data("kendoWindow").content(data).open();
+        });
+    };
+
     $(document).ready(function () {
         $("#grid").kendoGrid({
             dataSource: {
-                type: "json",
+                //type: "json",
                 transport: {
                     read: {
                         url: "@Html.Raw(Url.Action("List", "Product"))",
@@ -38,15 +50,26 @@
                 @await Html.PartialAsync("_GridPagerMessages")
             },
             scrollable: false,
+            selectable:"cell",
+            change: onChange,
             columns: [
                 {
                     field: "ProductName",
                     title: "Product Name",
                     headerAttributes: { style: "text-align:right" },
                     attributes: { style: "text-align:right" },
+                    template: "<div>Product Name:#=ProductName#</div>"
                 }
             ]
         });
+
+        $("#detail").kendoWindow({
+            width: "600px",
+            title: "About Alvar Aalto",
+            visible: false,
+            modal: true
+        });
     });
 </script>
+
 

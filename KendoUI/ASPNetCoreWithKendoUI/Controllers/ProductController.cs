@@ -1,11 +1,17 @@
-﻿using ASPNetCoreWithKendoUI.Factories;
+﻿using System.Threading;
+using ASPNetCoreWithKendoUI.Factories;
 using ASPNetCoreWithKendoUI.Models.Product;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
 
 namespace ASPNetCoreWithKendoUI.Controllers
 {
     public class ProductController : BaseController
     {
+        [ViewContext]
+        protected ViewContext viewContext { get; set; }
+
         public virtual IActionResult Index()
         {
             return RedirectToAction("List");
@@ -32,10 +38,16 @@ namespace ASPNetCoreWithKendoUI.Controllers
         }
 
         [HttpPost]
-        public virtual IActionResult Create(ProductModel model)
+        public virtual IActionResult Update(ProductModel model)
         {
-            var result = model;
-            return View(result);
+            ProductModelFactory.Update(model);
+            return Ok(model);
+        }
+
+        public virtual IActionResult DetailContent(int id)
+        {
+            var model = ProductModelFactory.GetProductsById(id);
+            return PartialView(model);
         }
 
         #region Api

@@ -30,5 +30,17 @@ namespace ASPNetCoreWithKendoUI.Factories
 
             return model;
         }
+
+        public static ProductModel GetProductsById(int id)
+        {
+            return _list.SingleOrDefault(product => product.Id == id);
+        }
+
+        public static ProductModel Update(ProductModel model)
+        {
+            var product = _list.SingleOrDefault(p => p.Id == model.Id);
+            product.ProductName = model.ProductName;
+            return product;
+        }
     }
 }
