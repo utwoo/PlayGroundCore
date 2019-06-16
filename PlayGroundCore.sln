@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.106
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29001.49
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RabbitMQ", "RabbitMQ", "{397131F4-304E-484A-B048-FE8602160029}"
 EndProject
@@ -84,7 +84,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiDemo", "NetCore\ApiDemo\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Refit", "Refit", "{77BF6A19-6CB9-413C-9D89-A370060F3B31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefitDemo", "Refit\RefitDemo\RefitDemo.csproj", "{94117DD2-1331-4C6D-A1B4-3347622F59B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RefitDemo", "Refit\RefitDemo\RefitDemo.csproj", "{94117DD2-1331-4C6D-A1B4-3347622F59B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JsonPatch", "JsonPatch", "{383647FA-80E9-45AA-ACC7-B6854D938121}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonPatchDemo", "JsonPatch\JsonPatchDemo\JsonPatchDemo.csproj", "{C8E00D57-B4E9-4EEE-9327-DD7F41B6B019}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -168,6 +172,10 @@ Global
 		{94117DD2-1331-4C6D-A1B4-3347622F59B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94117DD2-1331-4C6D-A1B4-3347622F59B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94117DD2-1331-4C6D-A1B4-3347622F59B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8E00D57-B4E9-4EEE-9327-DD7F41B6B019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8E00D57-B4E9-4EEE-9327-DD7F41B6B019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8E00D57-B4E9-4EEE-9327-DD7F41B6B019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8E00D57-B4E9-4EEE-9327-DD7F41B6B019}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -192,6 +200,7 @@ Global
 		{F33039C0-22A6-48AB-8E71-BAE012E2DBDC} = {4A49BA9B-6DDE-4176-A330-F6076EEE9621}
 		{2FB9A153-6B3D-463C-A2D8-9AEF5ACAF629} = {89B4A445-00CD-4E55-98A0-CACF777BF8E9}
 		{94117DD2-1331-4C6D-A1B4-3347622F59B2} = {77BF6A19-6CB9-413C-9D89-A370060F3B31}
+		{C8E00D57-B4E9-4EEE-9327-DD7F41B6B019} = {383647FA-80E9-45AA-ACC7-B6854D938121}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A293C881-2D60-49DE-B796-827CC715D9D2}
