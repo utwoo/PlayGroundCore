@@ -90,6 +90,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JsonPatch", "JsonPatch", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonPatchDemo", "JsonPatch\JsonPatchDemo\JsonPatchDemo.csproj", "{C8E00D57-B4E9-4EEE-9327-DD7F41B6B019}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LaunchDarkly", "LaunchDarkly", "{31D2FB33-B4A8-4323-A22C-0F5369CC27A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaunchDarklyDemo", "LaunchDarkly\LaunchDarklyDemo\LaunchDarklyDemo.csproj", "{CADA894F-DFCB-4C30-B9FF-456DEC5D2430}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -176,6 +180,10 @@ Global
 		{C8E00D57-B4E9-4EEE-9327-DD7F41B6B019}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8E00D57-B4E9-4EEE-9327-DD7F41B6B019}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8E00D57-B4E9-4EEE-9327-DD7F41B6B019}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CADA894F-DFCB-4C30-B9FF-456DEC5D2430}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CADA894F-DFCB-4C30-B9FF-456DEC5D2430}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CADA894F-DFCB-4C30-B9FF-456DEC5D2430}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CADA894F-DFCB-4C30-B9FF-456DEC5D2430}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -201,6 +209,7 @@ Global
 		{2FB9A153-6B3D-463C-A2D8-9AEF5ACAF629} = {89B4A445-00CD-4E55-98A0-CACF777BF8E9}
 		{94117DD2-1331-4C6D-A1B4-3347622F59B2} = {77BF6A19-6CB9-413C-9D89-A370060F3B31}
 		{C8E00D57-B4E9-4EEE-9327-DD7F41B6B019} = {383647FA-80E9-45AA-ACC7-B6854D938121}
+		{CADA894F-DFCB-4C30-B9FF-456DEC5D2430} = {31D2FB33-B4A8-4323-A22C-0F5369CC27A8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A293C881-2D60-49DE-B796-827CC715D9D2}
