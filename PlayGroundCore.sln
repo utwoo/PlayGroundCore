@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28803.352
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RabbitMQ", "RabbitMQ", "{397131F4-304E-484A-B048-FE8602160029}"
 EndProject
@@ -16,27 +16,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KendoUI", "KendoUI", "{29D1BF0F-BF57-43AD-8499-B54E91B53C7A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASPNetCoreWithKendoUI", "KendoUI\ASPNetCoreWithKendoUI\ASPNetCoreWithKendoUI.csproj", "{8D9DA171-DC62-4E5B-AE0F-261A956E82D6}"
-EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "RabbitMQ.HTML", "RabbitMQ\RabbitMQ.HTML\", "{AA4D5C16-4F03-43B6-BD8B-492B8EC219EF}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_8437"
-		Debug.AspNetCompiler.PhysicalPath = "RabbitMQ\RabbitMQ.HTML\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_8437\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_8437"
-		Release.AspNetCompiler.PhysicalPath = "RabbitMQ\RabbitMQ.HTML\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_8437\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "8437"
-		SlnRelativePath = "RabbitMQ\RabbitMQ.HTML\"
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CAP", "CAP", "{104F5E8B-EC63-457E-987B-1441CD848447}"
 EndProject
@@ -86,6 +65,29 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Refit", "Refit", "{77BF6A19
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RefitDemo", "Refit\RefitDemo\RefitDemo.csproj", "{94117DD2-1331-4C6D-A1B4-3347622F59B2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JsonPatch", "JsonPatch", "{383647FA-80E9-45AA-ACC7-B6854D938121}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonPatchDemo", "JsonPatch\JsonPatchDemo\JsonPatchDemo.csproj", "{C8E00D57-B4E9-4EEE-9327-DD7F41B6B019}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LaunchDarkly", "LaunchDarkly", "{31D2FB33-B4A8-4323-A22C-0F5369CC27A8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaunchDarklyDemo", "LaunchDarkly\LaunchDarklyDemo\LaunchDarklyDemo.csproj", "{CADA894F-DFCB-4C30-B9FF-456DEC5D2430}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JwtBearer", "JwtBearer", "{0BF3C99B-38CE-4F04-BB15-18E23862E0CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtBearerDemo", "JwtBearerDemo\JwtBearerDemo\JwtBearerDemo.csproj", "{01690926-199C-4EED-8AFC-8D807DE168C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RabbitMQ.HTML", "RabbitMQ.HTML", "{4FBA9B0E-C1B3-44BC-8A43-DE57B75AA272}"
+	ProjectSection(SolutionItems) = preProject
+		RabbitMQ\RabbitMQ.HTML\RabbitMQ Web STOMP Examples\Index.html = RabbitMQ\RabbitMQ.HTML\RabbitMQ Web STOMP Examples\Index.html
+		RabbitMQ\RabbitMQ.HTML\RabbitMQ Web STOMP Examples\jquery.min.js = RabbitMQ\RabbitMQ.HTML\RabbitMQ Web STOMP Examples\jquery.min.js
+		RabbitMQ\RabbitMQ.HTML\RabbitMQ Web STOMP Examples\main.css = RabbitMQ\RabbitMQ.HTML\RabbitMQ Web STOMP Examples\main.css
+		RabbitMQ\RabbitMQ.HTML\RabbitMQ Web STOMP Examples\stomp.min.js = RabbitMQ\RabbitMQ.HTML\RabbitMQ Web STOMP Examples\stomp.min.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PBKDF2", "PBKDF2", "{0B54E4CC-FE41-45C5-83E0-AFB2DECB23EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PBKDF2Demo", "PBKDF2\PBKDF2Demo\PBKDF2Demo.csproj", "{67C7CBAC-E2D9-48DB-AA80-CC2634B939FC}"
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceFabric", "ServiceFabric", "{C8A0248D-063A-4E04-A950-3E5116CC47C6}"
 EndProject
 Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "HelloWorldApplication", "ServiceFabric\HelloWorldApplication\HelloWorldApplication.sfproj", "{9E9DF4C0-EB74-4E18-9921-6561EACB2631}"
@@ -254,6 +256,22 @@ Global
 		{94117DD2-1331-4C6D-A1B4-3347622F59B2}.Debug|x64.Build.0 = Debug|Any CPU
 		{94117DD2-1331-4C6D-A1B4-3347622F59B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94117DD2-1331-4C6D-A1B4-3347622F59B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8E00D57-B4E9-4EEE-9327-DD7F41B6B019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8E00D57-B4E9-4EEE-9327-DD7F41B6B019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8E00D57-B4E9-4EEE-9327-DD7F41B6B019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8E00D57-B4E9-4EEE-9327-DD7F41B6B019}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CADA894F-DFCB-4C30-B9FF-456DEC5D2430}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CADA894F-DFCB-4C30-B9FF-456DEC5D2430}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CADA894F-DFCB-4C30-B9FF-456DEC5D2430}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CADA894F-DFCB-4C30-B9FF-456DEC5D2430}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01690926-199C-4EED-8AFC-8D807DE168C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01690926-199C-4EED-8AFC-8D807DE168C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01690926-199C-4EED-8AFC-8D807DE168C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01690926-199C-4EED-8AFC-8D807DE168C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67C7CBAC-E2D9-48DB-AA80-CC2634B939FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67C7CBAC-E2D9-48DB-AA80-CC2634B939FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67C7CBAC-E2D9-48DB-AA80-CC2634B939FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67C7CBAC-E2D9-48DB-AA80-CC2634B939FC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{94117DD2-1331-4C6D-A1B4-3347622F59B2}.Release|x64.ActiveCfg = Release|Any CPU
 		{94117DD2-1331-4C6D-A1B4-3347622F59B2}.Release|x64.Build.0 = Release|Any CPU
 		{9E9DF4C0-EB74-4E18-9921-6561EACB2631}.Debug|Any CPU.ActiveCfg = Debug|x64
@@ -289,7 +307,6 @@ Global
 		{7C94671A-3D82-4BDA-BF3B-C881B18984B1} = {397131F4-304E-484A-B048-FE8602160029}
 		{D9329074-D6A5-47B6-85BE-397E6D31E12F} = {C9630BB6-99DA-4A31-BCF5-2FDDCD39C824}
 		{8D9DA171-DC62-4E5B-AE0F-261A956E82D6} = {29D1BF0F-BF57-43AD-8499-B54E91B53C7A}
-		{AA4D5C16-4F03-43B6-BD8B-492B8EC219EF} = {397131F4-304E-484A-B048-FE8602160029}
 		{51997A3C-ED77-4FED-8787-B278EB387846} = {104F5E8B-EC63-457E-987B-1441CD848447}
 		{232A0D58-8E7E-4C51-A67C-0C03AD32D3DC} = {E7681BD9-197E-491D-B3CC-0675F0045262}
 		{A2BA9F75-D252-484C-BF28-F154A5908D07} = {E7681BD9-197E-491D-B3CC-0675F0045262}
@@ -304,6 +321,11 @@ Global
 		{F33039C0-22A6-48AB-8E71-BAE012E2DBDC} = {4A49BA9B-6DDE-4176-A330-F6076EEE9621}
 		{2FB9A153-6B3D-463C-A2D8-9AEF5ACAF629} = {89B4A445-00CD-4E55-98A0-CACF777BF8E9}
 		{94117DD2-1331-4C6D-A1B4-3347622F59B2} = {77BF6A19-6CB9-413C-9D89-A370060F3B31}
+		{C8E00D57-B4E9-4EEE-9327-DD7F41B6B019} = {383647FA-80E9-45AA-ACC7-B6854D938121}
+		{CADA894F-DFCB-4C30-B9FF-456DEC5D2430} = {31D2FB33-B4A8-4323-A22C-0F5369CC27A8}
+		{01690926-199C-4EED-8AFC-8D807DE168C4} = {0BF3C99B-38CE-4F04-BB15-18E23862E0CB}
+		{4FBA9B0E-C1B3-44BC-8A43-DE57B75AA272} = {397131F4-304E-484A-B048-FE8602160029}
+		{67C7CBAC-E2D9-48DB-AA80-CC2634B939FC} = {0B54E4CC-FE41-45C5-83E0-AFB2DECB23EB}
 		{9E9DF4C0-EB74-4E18-9921-6561EACB2631} = {C8A0248D-063A-4E04-A950-3E5116CC47C6}
 		{3072BD71-3308-43C6-BD00-FAE1672BB381} = {C8A0248D-063A-4E04-A950-3E5116CC47C6}
 		{0C0995E6-50F3-478F-9225-CF995C6755DD} = {0D8425F3-2BFC-4479-955A-95DA32B75EC0}

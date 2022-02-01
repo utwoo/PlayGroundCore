@@ -1,0 +1,6 @@
+﻿### Get Access Token
+POST http://localhost:5277/WeatherForecast
+
+### Access API
+GET  http://localhost:5277/WeatherForecast
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo0NDM1NSIsImF1ZCI6ImFwaSIsIkd1aWQiOiIyNDViMGM3Yi04ZmQ5LTQxM2ItYmMyMi00NTNkMThmMjc3NTYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsic3lzdGVtIiwiYWRtaW4iXSwiZXhwIjoxNjQxNzI5NDk1fQ.xGqi6vvEcxCaWwtLXbwaYN__nZiKd6uvbV0WSH5Oats
