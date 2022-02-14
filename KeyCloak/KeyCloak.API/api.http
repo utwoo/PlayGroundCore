@@ -1,4 +1,4 @@
-﻿### GET ACCESS TOKEN FROM KeyCloak (password mode) (https://blog.csdn.net/MRLEE1212/article/details/103902379)
+﻿### GET ACCESS TOKEN FROM KeyCloak (password mode) (https://blog.csdn.net/MRLEE1212/article/details/103902379) (https://www.cnblogs.com/wjsgzcn/p/12753529.html)
 POST http://centa:8090/realms/DotNetCore/protocol/openid-connect/token
 Content-Type: application/x-www-form-urlencoded
 
