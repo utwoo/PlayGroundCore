@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using Serilog;
@@ -10,13 +12,11 @@ namespace RabbitMQ.Beta
     {
         public static void Main(string[] args)
         {
-            int random = new Random().Next(1, 1000);
+            var exchangeName = args.Length >= 1 ? args[0] : "DefaultExchange";
+            var queueName = args.Length >= 2 ? args[1] : "DefaultQueue";
+            var routeKey = args.Length >= 3 ? args[2] : string.Empty;
 
-            string exchangeName = args.Length >= 1 ? args[0] : "DefaultExchange";
-            string queueName = args.Length >= 2 ? args[1] : "DefaultQueue";
-            string routeKey = args.Length >= 3 ? args[2] : string.Empty;
-
-            // confirgure logger
+            // configure logger
             Log.Logger = new LoggerConfiguration()
                 .WriteTo.ColoredConsole()
                 .CreateLogger();
@@ -24,15 +24,14 @@ namespace RabbitMQ.Beta
             // log start
             Log.Information("Receive Service Start...");
 
-            // configure RabbitMQ connenction factory
+            // configure RabbitMQ connection factory
             var connectionFactory = new ConnectionFactory
             {
-                //HostName = "47.96.126.127", // Aliyun
-                HostName = "192.168.227.134", // CentOS Beta
+                HostName = "192.168.20.151",
                 Port = 5672,
-                //VirtualHost = "host",
-                UserName = "guest",
-                Password = "guest"
+                VirtualHost = "host",
+                UserName = "admin",
+                Password = "admin"
             };
 
             // create RabbitMQ connection
@@ -41,6 +40,8 @@ namespace RabbitMQ.Beta
                 // create RabbitMQ channel
                 using (var channel = connection.CreateModel())
                 {
+                    // Set Prefetch
+                    channel.BasicQos(0, 1, false);
                     // declare an exchange
                     channel.ExchangeDeclare(exchangeName, string.IsNullOrEmpty(routeKey) ? ExchangeType.Fanout : ExchangeType.Direct);
                     // declare a queue
@@ -49,12 +50,23 @@ namespace RabbitMQ.Beta
                     channel.QueueBind(queueName, exchangeName, routeKey);
                     // declare a consumer
                     var consumer = new EventingBasicConsumer(channel);
-
+                    consumer.Shutdown += (sender, eventArgs) => { Log.Information($"Consumer Shutdown:{eventArgs.Cause}"); };
                     consumer.Received += (model, eventArgs) =>
                     {
-                        byte[] body = eventArgs.Body;
-                        Log.Information($"Received Message:{Encoding.UTF8.GetString(body)}");
-                        channel.BasicAck(eventArgs.DeliveryTag, true);
+                        try
+                        {
+                            var body = eventArgs.Body;
+                            Log.Information($"Received Message:{Encoding.UTF8.GetString(body)}");
+
+                            Thread.Sleep(90 * 1000);
+                            channel.BasicAck(eventArgs.DeliveryTag, false);
+
+                            Log.Information($"Successfully Message:{Encoding.UTF8.GetString(body)}");
+                        }
+                        catch (Exception ex)
+                        {
+                            Log.Error($"Consumer Receive Error:{ex.Message}");
+                        }
                     };
 
                     // Use Rx.Net to Throttle

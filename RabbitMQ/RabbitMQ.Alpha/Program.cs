@@ -13,7 +13,7 @@ namespace RabbitMQ.Alpha
             string command = string.Empty;
             string[] commands;
 
-            // confirgure logger
+            // configure logger
             Log.Logger = new LoggerConfiguration()
                 .WriteTo.ColoredConsole()
                 .CreateLogger();
@@ -21,15 +21,14 @@ namespace RabbitMQ.Alpha
             // log start
             Log.Information("Send Service Start...  Please press Message [Exchange] [RouteKey]");
 
-            // configure RabbitMQ connenction factory
+            // configure RabbitMQ connection factory
             var connectionFactory = new ConnectionFactory
             {
-                //HostName = "47.96.126.127", // Aliyun
-                HostName = "192.168.227.134", // CentOS Beta
+                HostName = "192.168.20.151", // CentOS Alpha
                 Port = 5672,
-                //VirtualHost = "host",
-                UserName = "guest",
-                Password = "guest"
+                VirtualHost = "host",
+                UserName = "admin",
+                Password = "admin"
             };
 
             // create RabbitMQ connection
