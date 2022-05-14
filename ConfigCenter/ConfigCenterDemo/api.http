@@ -1,0 +1,3 @@
+﻿### Get Setting in Consul
+GET https://localhost:5001/DemoSetting?key=ConsulDemo/Setting
+Content-Type: application/json
