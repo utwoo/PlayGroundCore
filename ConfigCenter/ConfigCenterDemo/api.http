@@ -1,0 +1,7 @@
+﻿### Get Value by Consul Client
+GET https://localhost:5001/Config?key=ConsulDemo/Setting
+Content-Type: application/json
+
+### Get Value by registing configuration in Consul 
+GET https://localhost:5001/Config/Message
+Content-Type: application/json
