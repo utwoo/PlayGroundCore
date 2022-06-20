@@ -20,8 +20,8 @@ namespace Email.Core
         public ITemplateRenderer Renderer { get; set; }
         public ISender Sender { get; set; }
 
-        public static readonly ITemplateRenderer DefaultRenderer = new ReplaceRenderer();
-        public static readonly ISender DefaultSender = new SaveToDiskSender("/");
+        public static ITemplateRenderer DefaultRenderer { get; set; } = new ReplaceRenderer();
+        public static ISender DefaultSender { get; set; } = new SaveToDiskSender("/");
 
         /// <summary>
         /// Creates a new email instance with default settings.
@@ -98,7 +98,7 @@ namespace Email.Core
             Data.FromAddress = new Address(emailAddress, name);
             return this;
         }
-        
+
         /// <summary>
         /// Adds a recipient to the email, Splits name and address on ';'
         /// </summary>
@@ -119,6 +119,7 @@ namespace Email.Core
                     {
                         currentName = nameSplit[i];
                     }
+
                     Data.ToAddresses.Add(new Address(addressSplit[i].Trim(), currentName.Trim()));
                 }
             }
@@ -126,6 +127,7 @@ namespace Email.Core
             {
                 Data.ToAddresses.Add(new Address(emailAddress.Trim(), name?.Trim()));
             }
+
             return this;
         }
 

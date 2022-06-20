@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Linq;
+using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using Email.Core.Interfaces;
@@ -9,12 +10,8 @@ namespace Email.Core.Renderers
     {
         public string Parse<T>(string template, T model, bool isHtml = true)
         {
-            foreach (var pi in model.GetType().GetRuntimeProperties())
-            {
-                template = template.Replace($"##{pi.Name}##", pi.GetValue(model, null).ToString());
-            }
-
-            return template;
+            return model.GetType().GetRuntimeProperties()
+                .Aggregate(template, (current, pi) => current.Replace($"##{pi.Name}##", pi.GetValue(model, null).ToString()));
         }
 
         public Task<string> ParseAsync<T>(string template, T model, bool isHtml = true, CancellationToken cancellationToken = default)
